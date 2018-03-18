@@ -36,7 +36,7 @@ export class HomePage {
               for (let currency of this.target) {
                   this.outputs.push({
                       name  : currency,
-                      value : (this.input * currencyRates[this.source] * currencyRates[currency])
+                      value : (this.input *  currencyRates[currency] / currencyRates[this.source])
 
 
                   });
