@@ -1,0 +1,10 @@
+<ion-menu #menu [content]="content">
+  <ion-content>
+      <ion-list>
+          <button (click)="openCurrencyPage()" ion-item>Çevirici</button>
+          <button (click)="openSettingsPage()" ion-item>Ayarlar</button>
+      </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #content [root]="rootPage"></ion-nav>

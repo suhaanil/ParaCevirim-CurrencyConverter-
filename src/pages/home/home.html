@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Para Birimi Çevirici</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+    <ion-card>
+        <ion-list inset>
+            <ion-item>
+                <ion-label color="primary">{{ source }}</ion-label>
+                <ion-input [(ngModel)]="input" type="number"></ion-input>
+            </ion-item>
+            <ion-item>
+                <button (click)="Cevirim()" ion-button full>Hesapla</button>
+            </ion-item>
+        </ion-list>
+    </ion-card>
+
+    <ion-card>
+        <ion-list>
+            <ion-item *ngFor="let output of outputs">
+                <ion-label color="primary">{{ output.name }}</ion-label>
+                <div item-content>{{ output.value | number:'1.2-2' }}</div>
+            </ion-item>
+        </ion-list>
+    </ion-card>
+
+    <ion-card>
+
+     Lütfen ayarlar sayfasından gerekli seçim işlemlerini yapınız!
+    </ion-card>
+</ion-content>
